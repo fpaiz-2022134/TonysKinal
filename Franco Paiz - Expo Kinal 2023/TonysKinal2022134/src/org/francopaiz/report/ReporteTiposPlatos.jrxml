@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTiposPlatos" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1b220e01-16f8-4274-9e6a-bf2bbc6b84e6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fondoTipoPlato" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[Select
+    TP.codigoTipoPlato,
+    TP.descripcionTipo
+	from TipoPlato TP;]]>
+	</queryString>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="5bdc1d46-c706-4217-bb7f-3e7fcf09a0c8"/>
+				<imageExpression><![CDATA[$P{fondoTipoPlato}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="179" splitType="Stretch">
+			<staticText>
+				<reportElement x="153" y="123" width="297" height="45" forecolor="#A75C4E" uuid="89099893-0071-48fe-9ba4-351916d51a11"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPOS PLATOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="233" y="168" width="136" height="1" forecolor="#006666" uuid="74ec64a4-3019-4299-a5a0-c99742182b24"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="19" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="109" y="0" width="100" height="20" forecolor="#2D3555" uuid="20a00c50-62f0-4dc2-92fa-4385514a85bc"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Tipo Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="0" width="100" height="20" forecolor="#2D3555" uuid="119f99cc-f4f5-4207-ab56-a4fe336ed64d"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción Tipo Plato]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<rectangle>
+				<reportElement x="22" y="0" width="241" height="20" backcolor="#F2E3B3" uuid="02de5260-9fa1-47b3-99b2-2b16114aa24b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="263" y="0" width="241" height="20" backcolor="#F2E3B3" uuid="bc6ef267-6455-43e5-a09c-2873b766596c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="47" y="0" width="151" height="20" uuid="868cb1e1-3e5d-4753-bd9d-6607de560f11"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoTipoPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="0" width="231" height="20" uuid="95e00664-0c1d-4dcc-a384-b1f7f727f5dd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="27" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

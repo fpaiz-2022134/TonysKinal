@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="605.0" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.francopaiz.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="508.0" fitWidth="616.0" layoutX="2.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/MenuFP.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="2.0" layoutY="6.0" prefHeight="44.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Producto" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tablas has">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProducto_has_Plato" text="Producto has Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicio_has_Plato" text="Servicio has Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicio_has_Empleado" text="Servicio has Empleado" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="36.0" fitWidth="41.0" layoutX="522.0" layoutY="443.0" onMouseClicked="#ventanaLogin" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/cerrarSesion.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="435.0" layoutY="454.0" text="Cerrar Sesión">
+         <font>
+            <Font name="Bookman Old Style" size="11.773585319519043" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

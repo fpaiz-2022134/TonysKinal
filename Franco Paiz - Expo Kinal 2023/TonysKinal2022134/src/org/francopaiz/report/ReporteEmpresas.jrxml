@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b11d567-4874-44bd-9bb7-8a4b06d872c6">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fondoEmpresa" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[Select
+  E.codigoEmpresa,
+  E.nombreEmpresa,
+  E.direccion,
+  E.telefono
+From Empresas E;]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image isUsingCache="true" evaluationTime="Report">
+				<reportElement x="0" y="0" width="584" height="752" uuid="5b374400-0c30-407b-b49f-205f1986f782"/>
+				<imageExpression><![CDATA[$P{fondoEmpresa}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="168" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="149" y="122" width="211" height="45" forecolor="#A75C4E" uuid="0d8cc9ce-7275-463f-aa60-f2b4c5344c77"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPRESAS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="179" y="167" width="136" height="1" forecolor="#006666" uuid="b1b7fa23-beb4-4a5a-b7ee-f2dd48fe943f"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="366" height="20" forecolor="#2D3555" backcolor="#2D3555" uuid="a9732899-fec3-4908-8540-e866fb6f863e"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Los datos de las empresas son los siguientes:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="405" y="0" width="128" height="20" uuid="1f34336f-db1d-4668-8481-0e82a363fa5d"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="139" height="20" forecolor="#2D3555" backcolor="#2D3555" uuid="6b4ae3d8-9eaa-4fee-8cb0-4f124dbc6fa7"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="3" width="142" height="20" forecolor="#2D3555" backcolor="#2D3555" uuid="ed8e6b97-e18b-4148-8654-7a076ca94a93"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="3" width="90" height="20" forecolor="#2D3555" backcolor="#2D3555" uuid="d54b91c4-a38b-441d-803c-c5009c11869c"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="82" height="20" forecolor="#2D3555" backcolor="#2D3555" uuid="afb8a79b-48bc-4cf3-b02d-349eb8fe1a80"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="440" y="2" width="82" height="29" forecolor="#000000" backcolor="#F2E3B3" uuid="f4ccdb2e-1aad-44bc-a867-41499738ff51"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="281" y="2" width="159" height="29" forecolor="#000000" backcolor="#F2E3B3" uuid="a279801f-896a-4696-810d-22aa1e95a1d2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="139" y="2" width="142" height="29" forecolor="#000000" backcolor="#F2E3B3" uuid="da86e006-b1b1-4417-9d65-d72b36aa3988"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="2" width="139" height="29" forecolor="#000000" backcolor="#F2E3B3" uuid="152aab20-d4a2-4f97-b3b3-56a350c84b23"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="2" width="128" height="29" uuid="3754680c-e00c-45e5-86b9-ff3e45a4dc11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="2" width="117" height="29" uuid="3b78b6ee-3a29-48a7-aee2-b9bf13ee04d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="2" width="159" height="29" uuid="24400555-e16c-444e-a98a-72405caf21ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="2" width="82" height="29" uuid="e0ffda31-6104-4e00-9ee3-fbaa904b8511"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="128" y="10" width="363" height="20" forecolor="#FBFBFB" backcolor="#2D3555" uuid="920953a3-b62b-4628-bc02-0ee4e1f56dc8"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Franco Alejandro Paiz González -2022134]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

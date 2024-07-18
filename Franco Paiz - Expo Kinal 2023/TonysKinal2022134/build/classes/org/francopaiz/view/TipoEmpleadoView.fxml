@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="897.0" style="-fx-background-color: #f3e4b3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.francopaiz.controller.TipoEmpleadoController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-17.0" prefHeight="64.0" prefWidth="897.0" style="-fx-background-color: #a75c4e;">
+         <children>
+            <Pane layoutX="351.0" layoutY="14.0" prefHeight="48.0" prefWidth="314.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #f68913;">
+               <children>
+                  <Label layoutX="15.0" layoutY="1.0" prefHeight="46.0" prefWidth="308.0" text="Tipo Empleado" textAlignment="CENTER" textFill="#f1f6f8">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="46.0" fitWidth="59.0" layoutX="835.0" layoutY="15.0" onDragDetected="#menuPrincipal" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/regresar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="686.0" fitWidth="693.0" layoutX="211.0" layoutY="47.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/imagenorange-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="47.0" prefHeight="493.0" prefWidth="201.0" style="-fx-background-color: #c9b396;">
+         <children>
+            <Button fx:id="btnNuevo" layoutX="3.0" layoutY="91.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="66.0" prefWidth="186.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Crear" textFill="#f68913">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="50.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Agregar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="3.0" layoutY="177.0" mnemonicParsing="false" onAction="#editar" prefHeight="62.0" prefWidth="186.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Editar" textFill="#f68913">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/refresh_208px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="6.0" layoutY="257.0" mnemonicParsing="false" onAction="#reporte" prefHeight="62.0" prefWidth="186.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Reporte" textFill="#f68913">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/document_500px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="6.0" layoutY="340.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="62.0" prefWidth="186.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Eliminar" textFill="#f68913">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="85.0" fitWidth="91.0" layoutX="49.0" layoutY="-36.0" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/MenuFP.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <GridPane layoutX="211.0" layoutY="70.0" prefHeight="46.0" prefWidth="677.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.98112532879472" minWidth="10.0" prefWidth="193.1886728245326" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.13206854032947" minWidth="10.0" prefWidth="84.32076194168386" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.11320588494522" minWidth="10.0" prefWidth="104.18870089766233" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.73588000875077" minWidth="10.0" prefWidth="273.5094255424983" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="188.0" text="Código Tipo Empleado:" textFill="#2d3555">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="109.0" text="Descripción: " textFill="#2d3555" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDescripcionTipoEmpleado" editable="false" prefHeight="28.0" prefWidth="264.0" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Bookman Old Style" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCodigoTipoEmpleado" editable="false" prefHeight="28.0" prefWidth="82.0" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Bookman Old Style" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblTiposEmpleados" layoutX="211.0" layoutY="210.0" onMouseClicked="#seleccionarElemento" prefHeight="313.0" prefWidth="677.0" stylesheets="@../resource/Tablas.css">
+         <columns>
+            <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="188.37738037109375" text="Cod. Tipo Empleado" />
+            <TableColumn fx:id="colDescripcion" prefWidth="488.1510009765625" text="Descripción" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="90.0" fitWidth="79.0" layoutX="775.0" layoutY="125.0" onMouseClicked="#ventanaEmpleado" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/employee.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="655.0" layoutY="146.0" prefHeight="18.0" prefWidth="132.0" text="Ver empleado &gt;" textFill="#2d3555">
+         <font>
+            <Font name="Bookman Old Style Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTiposEmpleados" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1cb42e5-c4e4-4358-b429-f10933011ca6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fondoTipoEmpleado" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[Select
+   TE.codigoTipoEmpleado,
+   TE.descripcion
+     from TipoEmpleado TE;]]>
+	</queryString>
+	<field name="codigoTipoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="9159c2fe-2f18-45f0-926c-83f196ec1d45"/>
+				<imageExpression><![CDATA[$P{fondoTipoEmpleado}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="174" splitType="Stretch">
+			<staticText>
+				<reportElement x="95" y="123" width="379" height="45" forecolor="#A75C4E" uuid="d1dd602d-01fb-461b-9528-8f874bcf5560"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPOS EMPLEADOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="230" y="168" width="136" height="1" forecolor="#006666" uuid="4042c0e0-e6e4-435f-8127-fec6dbc518f0"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="49" y="2" width="181" height="20" forecolor="#2D3555" uuid="e8bbf1cc-22e4-406a-924c-48224991b041"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Tipo Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="2" width="127" height="20" forecolor="#2D3555" uuid="751c11eb-1a41-4374-8197-454d977448ef"/>
+				<textElement>
+					<font fontName="Bookman Old Style" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="264" y="0" width="244" height="20" backcolor="#F2E3B3" uuid="84ac0f85-a35e-48b7-9b86-8979c90fd2fb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="20" y="0" width="244" height="20" backcolor="#F2E3B3" uuid="21576f11-e8ac-497d-904c-24b11b007335"/>
+			</rectangle>
+			<textField>
+				<reportElement x="61" y="0" width="100" height="20" uuid="dad1b67f-efb0-4bca-a979-1277314cb0a1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoTipoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="210" height="20" uuid="0667ca23-cf26-4ce4-9c2d-432655e0ef46"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
